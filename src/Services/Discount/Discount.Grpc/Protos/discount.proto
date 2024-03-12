@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option csharp_namespace = "Discount.Grpc.Protos"; //tell to generate csharp classes
+
+service DiscountProtoService {
+	rpc GetDiscount (GetDiscountRequest) returns (CouponModel);
+
+	rpc CreateDiscount (CreateDiscountRequest) returns (CouponModel);
+	rpc UpdateDiscount (UpdateDiscountRequest) returns (CouponModel);
+	rpc DeleteDiscount (DeleteDiscountRequest) returns (DeleteDiscountResponse);
+}
+
+//like csharp class defination
+message GetDiscountRequest {
+	string productName = 1;	
+}
+
+// 1,2,3,4 is the sequence of attribute
+message CouponModel {
+	int32 id = 1;
+	string productName = 2;
+	string description = 3;
+	int32 amount = 4;
+}
+
+message CreateDiscountRequest {
+	CouponModel coupon = 1;
+}
+
+message UpdateDiscountRequest {
+	CouponModel coupon = 1;
+}
+
+message DeleteDiscountRequest {
+	string productName = 1;
+}
+
+message DeleteDiscountResponse {
+	bool success = 1;
+}
