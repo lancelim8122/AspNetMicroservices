@@ -15,6 +15,9 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+	<PackageReference Include="MassTransit" Version="7.1.6" />
+	<PackageReference Include="MassTransit.AspNetCore" Version="7.1.6" />
+	<PackageReference Include="MassTransit.RabbitMQ" Version="7.1.6" />
   </ItemGroup>
 
   <ItemGroup>

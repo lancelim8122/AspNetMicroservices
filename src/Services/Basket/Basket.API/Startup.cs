@@ -60,7 +60,7 @@ namespace Basket.API
             services.AddMassTransitHostedService();
 
             //AutoMapper
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(typeof(Startup));
 
 
             services.AddControllers();
