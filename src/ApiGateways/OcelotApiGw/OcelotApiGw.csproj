@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   
@@ -10,5 +13,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
     <PackageReference Include="Ocelot" Version="17.0.0" />
     <PackageReference Include="Ocelot.Cache.CacheManager" Version="17.0.0" />
+  </ItemGroup>
+
+  
+  
+  <ItemGroup>
+    <Content Update="ocelot - Copy.Development.json">
+      <DependentUpon>ocelot.Development.json</DependentUpon>
+    </Content>
   </ItemGroup>
 </Project>
